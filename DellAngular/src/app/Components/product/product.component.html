@@ -1,0 +1,28 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="text-center">{{ regionCode | region}}</h1>
+    </div>
+</div>
+
+<div class="container margin-bottom-100">
+  <h3>Sales</h3>
+  <div class="row">
+    <app-main-chart [regionCode]="regionCode" class="col-sm-12"></app-main-chart>
+  </div>
+
+  <h3>Future Insights</h3>
+  <div class="row">
+    <app-insights class="col-sm-12"></app-insights>
+  </div>
+
+  <div *ngIf="regionCode === 'GLO'">
+    <app-adoption-charts [title]="'Market Share'" [regionCode]="regionCode"></app-adoption-charts>
+    <app-adoption-charts [title]="'Generations'" [regionCode]="regionCode"></app-adoption-charts>
+    <app-adoption-charts [title]="'Occupations'" [regionCode]="regionCode"></app-adoption-charts>
+  </div>
+
+  <div *ngIf="regionCode !== 'GLO'">
+    <app-adoption-charts [title]="'Generations'" [regionCode]="regionCode"></app-adoption-charts>
+    <app-adoption-charts [title]="'Occupations'" [regionCode]="regionCode"></app-adoption-charts>
+  </div>
+</div>

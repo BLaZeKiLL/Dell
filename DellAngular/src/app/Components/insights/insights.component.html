@@ -1,0 +1,9 @@
+<mat-card>
+  <div class="text-center">
+    <mat-form-field class="margin-right-10">
+      <input #quater type="number" matInput placeholder="Quater" class="text-center">
+    </mat-form-field>
+    <button mat-raised-button (click)="peridct(quater.value)">Submit</button>
+  </div>
+  <div *ngIf="predictionAvaliable" [innerHTML]="predictionHTML"></div>
+</mat-card>

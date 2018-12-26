@@ -1,0 +1,15 @@
+.card-shadow-15L {
+    width: 30%;
+    margin-left: 18.4%;
+    margin-right: 1.6%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.card-shadow-15R {
+    width: 30%;
+    margin-left: 1.6%;
+    margin-right: 18.4%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}

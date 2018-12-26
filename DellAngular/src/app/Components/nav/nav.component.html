@@ -1,0 +1,31 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Regions</mat-toolbar>
+    <mat-nav-list>
+      <h3>Products</h3>
+      <a mat-list-item [routerLink]="['/product', 'GLO']">Global</a>
+      <a mat-list-item [routerLink]="['/product', 'USC']">US & Canada</a>
+      <a mat-list-item [routerLink]="['/product', 'WSE']">South West Europe</a>
+      <a mat-list-item [routerLink]="['/product', 'CAJ']">China & Japan</a>
+      <a mat-list-item [routerLink]="['/product', 'SEA']">South East Asis</a>
+      <a mat-list-item [routerLink]="['/product', 'CA']">Central Africa</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>DELL</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
