@@ -22,6 +22,7 @@
   </div>
 
   <div *ngIf="regionCode !== 'GLO'">
+    <app-market-share [regionCode]="regionCode"></app-market-share>
     <app-adoption-charts [title]="'Generations'" [regionCode]="regionCode"></app-adoption-charts>
     <app-adoption-charts [title]="'Occupations'" [regionCode]="regionCode"></app-adoption-charts>
   </div>

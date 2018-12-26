@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ColorsService {
   inspiron = '#2196f3';
   xps = '#263238';
-  alienware: '#D32F2F';
+  alienware = '#D32F2F';
 
   inspiron3 = ['#90caf9', '#2196f3', '#0d47a1'];
   xps3 = ['#cfd8dc', '#757575', '#263238'];

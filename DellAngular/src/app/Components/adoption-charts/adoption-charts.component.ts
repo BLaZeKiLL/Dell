@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit, Input, OnChanges } from '@angular/core';
+import { Component, ViewChild, Input, OnChanges } from '@angular/core';
 import { PieCardComponent } from '../pie-card/pie-card.component';
 import { GlobalAdoptionsService } from 'src/app/Services/global-adoptions.service';
 import { ColorsService } from 'src/app/Services/colors.service';
@@ -10,7 +10,7 @@ import { LocalAdoptionsService } from 'src/app/Services/local-adoptions.service'
   templateUrl: './adoption-charts.component.html',
   styleUrls: ['./adoption-charts.component.css']
 })
-export class AdoptionChartsComponent implements /*AfterViewInit,*/ OnChanges {
+export class AdoptionChartsComponent implements OnChanges {
 
   @Input() title: string;
   @Input() regionCode: string;
@@ -23,14 +23,6 @@ export class AdoptionChartsComponent implements /*AfterViewInit,*/ OnChanges {
               private localLoader: LocalAdoptionsService,
               private colors: ColorsService,
               private lables: LabelsService) {  }
-
-  // ngAfterViewInit() {
-  //   if (this.regionCode === 'GLO') {
-  //     this.globalInit();
-  //   } else {
-  //     this.localInit();
-  //   }
-  // }
 
   ngOnChanges() {
     if (this.regionCode === 'GLO') {

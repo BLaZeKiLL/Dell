@@ -17,6 +17,7 @@ export class LabelsService {
              '11th Quater',
              '12th Quater'];
   regions = ['CA', 'CAJ', 'SEA', 'USC', 'SWE'];
+  market = ['Alienware', 'Inspiron', 'XPS'];
   generations = ['Gen 1', 'Gen 2', 'Gen 3'];
   occupations = ['Businessman', 'Developer', 'Farmer', 'Gamer', 'Manager', 'Student'];
 }
